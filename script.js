@@ -2,8 +2,9 @@ const wrapper = document.querySelector(".wrapper"),
 searchInput = wrapper.querySelector("input"),
 synonyms = wrapper.querySelector(".synonyms .list"),
 infoText = wrapper.querySelector(".info-text"),
-volumeIcon = wrapper.querySelector(".word ")
+volumeIcon = wrapper.querySelector(".fa-volume-up")
 let audio;
+
 
 function setInfoText(message, color = "#000") {
     infoText.style.color = color;
@@ -40,8 +41,11 @@ function handleApiResponse(result, word) {
         document.querySelector(".word span").innerText = phonetics;
         document.querySelector(".meaning span").innerText = definitions.definition;
         document.querySelector(".example span").innerText = definitions.example;
-        playAudio(result[0].phonetics[0].audio);
+        // playAudio(result[0].phonetics[0].audio);
         setSynonyms(definitions.synonyms);
+        volumeIcon.addEventListener("click", () => {
+            playAudio(result[0].phonetics[0].audio);
+          });
     }
 }
 

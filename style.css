@@ -10,19 +10,29 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: rgb(46, 51, 49);
+    background: url('image2.jpg') center/cover no-repeat;
 }
 .wrapper{
     width: 420px;
     background: linear-gradient(145deg, white, blue);
-    border-radius: 7px;
+    border-radius: 15px;
     padding: 28px 28px 45px;
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); */
+    /* color: white; */
 }
 .wrapper header{
     font-size: 28px;
     font-weight: 500;
     text-align: center;
+    font-style: italic;
 }
+
+.wrapper header:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
 .wrapper .search{
     position:relative;
     margin: 35px 0 18px;
