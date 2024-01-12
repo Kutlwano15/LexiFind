@@ -147,7 +147,7 @@ ul .content::-webkit-scrollbar{
 }
 .content li .details span{
     font-size: 15px;
-   color: rgb(43, 32, 16);
+   color: white;
 }
 .synonyms .details .list{
     display: flex;
