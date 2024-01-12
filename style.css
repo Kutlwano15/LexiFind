@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Joan&family=Poppins:ital,wght@1,100;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Joan:wght@100;200&family=Poppins:ital,wght@1,100;1,200&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -25,6 +25,7 @@ body{
     font-weight: 500;
     text-align: center;
     font-style: italic;
+    color: white;
 }
 
 .wrapper header:hover {
@@ -49,7 +50,9 @@ body{
     background: linear-gradient(to right, #5c84af, #e2afa5);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    color: white;
 }
+
 .search input:hover,
 .search input:focus {
     background: linear-gradient(to right, #f69e8d, #4f7cac); 
@@ -57,7 +60,7 @@ body{
 }
 
 .search input::placeholder{
-    color: rgb(39, 38, 37);
+    color: rgb(142, 139, 146); 
 }
 .search :where(i, span){
     position:absolute;

@@ -19,7 +19,7 @@ function setSynonyms(synonymsList) {
         synonyms.parentElement.style.display = "block";
         synonyms.innerHTML = "";
         for (let i = 0; i < Math.min(synonymsList.length, 5); i++) {
-            let tag = `<span onclick= search('${synonymsList[i]}')>${synonymsList[i]}</span>`;
+            let tag = `<span onclick= "search('${synonymsList[i]}')">${synonymsList[i]}</span>`;
             synonyms.insertAdjacentHTML("beforeend", tag);
         }
     }
@@ -46,7 +46,7 @@ function handleApiResponse(result, word) {
         // volumeIcon.addEventListener("click", () => {
         //     playAudio(result[0].phonetics[0].audio);
         //   });
-        audio = new Audio("https:" + result[0].phonetic[0].audio);
+        audio = new Audio("https:" + result[0].phonetics[0].audio);
 
         setSynonyms(definitions.synonyms);
     }
