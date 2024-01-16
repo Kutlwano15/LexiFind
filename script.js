@@ -25,10 +25,6 @@ function setSynonyms(synonymsList) {
     }
 }
 
-// function playAudio(audioUrl) {
-//     audio = new Audio("https:" + audioUrl);
-//     audio.play();
-// }
 
 function handleApiResponse(result, word) {
     if (result.title) {
@@ -42,11 +38,7 @@ function handleApiResponse(result, word) {
         document.querySelector(".word span").innerText = phonetics;
         document.querySelector(".meaning span").innerText = definitions.definition;
         document.querySelector(".example span").innerText = definitions.example;
-        // playAudio(result[0].phonetics[0].audio);
-        // volumeIcon.addEventListener("click", () => {
-        //     playAudio(result[0].phonetics[0].audio);
-        //   });
-        audio = new Audio("https:" + result[0].phonetics[0].audio);
+        audio = new Audio(result[0].phonetics[0].audio);
 
         setSynonyms(definitions.synonyms);
     }
